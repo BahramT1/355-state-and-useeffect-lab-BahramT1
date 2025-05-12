@@ -1,0 +1,138 @@
+/* reset & full-page red */
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d30b0b;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* main container */
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* header */
+.app-header {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* wrapper for list + pagination */
+.list-and-pagination {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* dark list container */
+.pokemon-list {
+  background-color: #282828;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+/* item button */
+.pokemon-item button {
+  width: 100%;
+  background-color: #3c3c3c;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.pokemon-item button:hover {
+  background-color: #4a4a4a;
+}
+
+/* pagination row */
+.pagination {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+/* pagination buttons */
+.btn-back,
+.btn-next {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.btn-back {
+  background-color: #555;
+  color: #ddd;
+}
+
+.btn-next {
+  background-color: #ffe600;
+  color: #000;
+}
+
+.btn-back:disabled,
+.btn-next:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* details card */
+.pokemon-details {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* details title */
+.pokemon-details h2 {
+  margin: 0 0 1rem;
+  text-transform: capitalize;
+  color: #c2b72a;
+  font-size: 1.6rem;
+}
+
+/* sprite */
+.pokemon-details img {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+}
+
+/* info lines */
+.pokemon-details p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
