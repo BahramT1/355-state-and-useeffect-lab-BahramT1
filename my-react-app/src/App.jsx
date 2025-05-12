@@ -10,7 +10,6 @@ function App() {
   const [totalCount, setTotalCount] = useState(0);
   const [selected, setSelected]     = useState(null);
 
-  // 1) fetchPage is declared outside useEffect, no try/catch
   const fetchPage = async () => {
     const res  = await fetch(
       `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`
@@ -20,12 +19,11 @@ function App() {
     setTotalCount(data.count);
   };
 
-  // 2) useEffect just calls fetchPage when offset changes
+  //useEffect just calls fetchPage when offset changes
   useEffect(() => {
     fetchPage();
   }, [offset]);
-
-  // fetchSingle also without try/catch
+  
   const fetchSingle = async (url) => {
     const res  = await fetch(url);
     const data = await res.json();
